@@ -1,13 +1,13 @@
 import React from "react";
-import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
+import { testAPI } from "../../../TestApi";
+
 
 export const Home = () => (
 	<div className="text-center mt-5">
-		<h1>Hello Rigo!</h1>
-		<p>
-			<img src={rigoImage} />
-		</p>
+		<button onClick={testAPI}>Get APi</button>
+		<h1>Final Project</h1>
+		<p>Filler text</p>
 		<a href="#" className="btn btn-success">
 			If you see this green button, bootstrap is working
 		</a>
