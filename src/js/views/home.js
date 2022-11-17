@@ -3,13 +3,24 @@ import "../../styles/home.css";
 import { testAPI } from "../../../TestApi";
 
 
-export const Home = () => (
-	<div className="text-center mt-5">
-		<button onClick={testAPI}>Get APi</button>
-		<h1>Final Project</h1>
-		<p>Filler text</p>
-		<a href="#" className="btn btn-success">
-			If you see this green button, bootstrap is working
-		</a>
-	</div>
-);
+
+
+export const Home = props => {
+	
+	return (
+		<div className="text-center mt-5">
+			<form>
+				<select name="genre">
+				<option value="none" selected disabled hidden>Genre</option>
+					<option value="Action">Action</option>
+					<option value="Adventure">Adventure</option>
+					<option value="Fighting">Fighting</option>
+					<option value="Racing">Racing</option>
+					<option value="RPG">RPG</option>
+				</select>
+			</form>
+	<button onClick={testAPI}>Get APi</button>
+</div>
+	);
+};
+
