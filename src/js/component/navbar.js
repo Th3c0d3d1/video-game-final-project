@@ -6,7 +6,7 @@ export const Navbar = () => {
 	return (
 		<nav className="navbar navbar-dark bg-dark">
 			<Link to="/">
-				<h1 className="navbar-brand mb-0 mx-2"><i className="fa-solid fa-meteor mx-2"></i>Blue Comet Gaming</h1>
+				<h2 className="navbar-brand mb-0 mx-2"><h2><i className="fa-solid fa-meteor mx-2"></i>Blue Comet Gaming</h2></h2>
 			</Link>
 				<form className="d-flex">
 					<input className="form-control mr-sm-2" type="search" placeholder="Find Games" aria-label="Search"></input>
