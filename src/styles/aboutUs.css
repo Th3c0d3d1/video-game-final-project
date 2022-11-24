@@ -2,6 +2,11 @@ button {
     margin: 10px;
 }
 img {
-    width: 432px;
-    height: 180px;
+    width: 200px;
+    height: 200px;
+}
+.card {
+    width: 30%;
+    margin: auto;
+    height: 400px;
 }

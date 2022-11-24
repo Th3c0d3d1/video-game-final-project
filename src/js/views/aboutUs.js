@@ -15,7 +15,7 @@ export const AboutUs = () => {
         <h1>About Us</h1>
         <p>Who we are and what we do.</p>
       </div>
-      <div className="card-deck">
+      <div className="card-deck d-flex">
         <div className="card">
           <img
             className="card-img-top"
