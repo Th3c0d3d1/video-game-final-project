@@ -1,13 +1,17 @@
-/* footer {
+footer {
     position: absolute;
     width: 100%;
-  } */
+  }
     footer { 
-    /* position: absolute; */
+    position: absolute;
     bottom: 0;
     height: 100px;
     width: 100%;
  }
 h5 {
-    padding-top: 10px;
+    margin-top: 8px;
+}
+h3 {
+    margin-top: 8px;
+    font-family: "Audiowide";
 }
