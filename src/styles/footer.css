@@ -2,8 +2,8 @@
     position: absolute;
     width: 100%;
   } */
- footer { 
-    position: absolute;
+    footer { 
+    /* position: absolute; */
     bottom: 0;
     height: 100px;
     width: 100%;
