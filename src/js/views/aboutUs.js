@@ -13,7 +13,7 @@ export const AboutUs = () => {
       <br />
       <div className="about-section text-center">
         <h1>About Us</h1>
-        <p>Who we are.</p>
+        <p>Who we are and what we do.</p>
       </div>
       <div className="card-deck d-flex">
         <div className="card">
@@ -48,13 +48,15 @@ export const AboutUs = () => {
         <div className="card">
           <img
             className="card-img-top"
-            src="https://gamenewsplus.net/wp-content/uploads/2021/02/pokemon-diamond-pearl-remake-to-be-announced-this-week-400x300.jpg"
+            src="https://www.meijer.com/content/dam/meijer/product/0002/40/0005/98/0002400005988_1_A1C1_0600.png"
             alt="Card image cap"
           ></img>
           <div className="card-body">
             <h5 className="card-title">Jacob</h5>
             <p className="card-text">
-              Before I took this class I knew nothing about coding. Now I know some things! That's what I call improvement! My favorite video game ever is Pokémon Diamond and Pearl.
+              This is a wider card with supporting text below as a natural
+              lead-in to additional content. This card has even longer content
+              than the first to show that equal height action.
             </p>
           </div>
         </div>
@@ -65,4 +67,3 @@ export const AboutUs = () => {
     </div>
   );
 };
-

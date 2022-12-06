@@ -1,42 +1,61 @@
-import React, {useContext} from "react";
+import React, {useState, useEffect, useContext} from "react";
+import rigoImage from "../../img/rigo-baby.jpg";
+import "../../styles/home.css";
+import { Context } from '../store/appContext.js'
+import { Result } from "parse-github-url";
+import { Link } from "react-router-dom"; 
+import { Single } from "./single";
 
-import Gamepicker from "../component/gamepicker";
-import { Context } from "../store/appContext";
+// export const Home = () => (
+// 	<div className="text-center mt-5">
+// 		<h1>Hello Rigo!</h1>
+// 		<p>
+// 			<img src={rigoImage} />
+// 		</p>
+// 		<a href="#" className="btn btn-success">
+// 			If you see this green button, bootstrap is working
+// 		</a>
+// 	</div>
+// );
 
-export const Home = props => {
-	const { store, actions } = useContext(Context);
-	return(<div>
-		<Gamepicker/>
-	{store.res.map((game, index) => {
-		return (
-			<div key={index}>
-				<h1>{game.name}</h1>
-				<p>
-					ESRB:
-					{game.esrb_rating
-						? game.esrb_rating.name
-						: "Rating Not available"}
-				</p>
-				<p>Released: {game.released}</p>
 
-				{/* {/* Bootstrap code. Card layout to display games */}
-				
-				<div class="card" >
-					<img src={game.background_image} class="card-img-top" alt="..." />
-					<div class="card-body">
-						<h5 class="card-title">{game.name}</h5>
-						<p class="card-text">  ESRB:
-							{game.esrb_rating
-								? game.esrb_rating.name
-								: "Rating Not available"}
-						</p>
-					</div>
+
+export const Home = (props) => {
+	const [value, setValue] = useState(''); // creating state; user text inputs in real time
+	const [result, setResult] = useState([]); // stores what we get back in the array to render to the site
+
+	const {store, actions} = useContext(Context)
+	console.log(store.results)
+
+	useEffect(() => {
+		actions.searchGames(`search=${value}`)
+
+	}, [value]); // triggered not every render cycle, but only when value changes
+  
+
+	return (
+		<div className="container">
+			{/* <p className="titleText"> Game Search </p>
+				<input type="text"
+				className="searchBar"
+				onChange={(e) => setValue(e.target.value)} // sets the value to the event =>
+				value = {value}
+				/> */}
+				<div className="searchBack d-flex-inline"> 
+					{store.results.map((result, index) => ( // index will include key value
+						// <a href="#" key={index}>
+							<div className="searchEntry">
+								<div className="">
+									<img src={result.background_image} className="img-thumbnail rounded" />
+								</div>
+								<div className="">
+									{result.name}
+								</div>
+								<Link to ={`/single/${ result.slug}`}>Go to Game!</ Link>
+							</div>
+						// </a>
+					))}
 				</div>
-
-			</div>
-		);
-	})
-	}</div>)
-
-};
-
+		</div>
+	)
+}

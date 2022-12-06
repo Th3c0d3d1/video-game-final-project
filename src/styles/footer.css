@@ -1,4 +1,4 @@
- footer { 
+footer { 
     bottom: 0;
     height: 100px;
     width: 100%;
@@ -8,5 +8,4 @@ h5 {
 }
 h3 {
     margin-top: 8px;
-    font-family: "Audiowide";
 }
