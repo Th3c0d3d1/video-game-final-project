@@ -11,7 +11,8 @@ export const Navbar = () => {
 	const {store, actions} = useContext(Context)
 
 	useEffect(() => {
-		actions.searchGames(`search=${value}`)
+    actions.searchPropertiesChanger('search', value);
+    actions.datafetcher()
 
 	}, [value]); // triggered not every render cycle, but only when value changes
 

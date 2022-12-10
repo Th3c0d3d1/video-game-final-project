@@ -5,7 +5,7 @@ import { Context } from '../store/appContext.js'
 import { Result } from "parse-github-url";
 import { Link } from "react-router-dom"; 
 import { Single } from "./single";
-
+import Gamepicker from "../component/gamepicker"
 // export const Home = () => (
 // 	<div className="text-center mt-5">
 // 		<h1>Hello Rigo!</h1>
@@ -25,24 +25,20 @@ export const Home = (props) => {
 	const [result, setResult] = useState([]); // stores what we get back in the array to render to the site
 
 	const {store, actions} = useContext(Context)
-	console.log(store.results)
+	//console.log(store.results)
 
 	useEffect(() => {
-		actions.searchGames(`search=${value}`)
+		actions.datafetcher();
 
 	}, [value]); // triggered not every render cycle, but only when value changes
   
-
+	
 	return (
+		
 		<div className="container">
-			{/* <p className="titleText"> Game Search </p>
-				<input type="text"
-				className="searchBar"
-				onChange={(e) => setValue(e.target.value)} // sets the value to the event =>
-				value = {value}
-				/> */}
-				<div className="searchBack d-flex-inline"> 
-					{store.results.map((result, index) => ( // index will include key value
+			<div className="searchBack d-flex-inline"> 
+				<Gamepicker/>
+					{store.res.map((result, index) => ( // index will include key value
 						// <a href="#" key={index}>
 							<div className="searchEntry">
 								<div className="">
@@ -51,11 +47,11 @@ export const Home = (props) => {
 								<div className="">
 									{result.name}
 								</div>
-								<Link to ={`/single/${ result.slug}`}>Go to Game!</ Link>
+								<Link to ={`/single/${result.slug}`}>Go to Game!</ Link>
 							</div>
 						// </a>
 					))}
-				</div>
+			</div>
 		</div>
 	)
 }
