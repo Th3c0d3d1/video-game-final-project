@@ -22,7 +22,7 @@ export const Gamepicker = props => {
 	// }, [store.searchProperties.genre]);
 	return (
 		<div className="text-center mt-5">
-			<form className="d-flex justify-content-evenly">
+			<form className="d-flex">
 
 				<select onChange={(e)=>(actions.searchPropertiesChanger('genre',e.target.value))}className="form-select" name="genre">
 					<option  value="Genre">Genres</option>

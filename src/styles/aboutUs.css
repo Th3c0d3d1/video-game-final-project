@@ -5,13 +5,10 @@ img {
     width: 200px;
     height: 200px;
 }
-.card {
+.aboutUsCard {
     width: 30%;
     margin: auto;
-    height: 400px;
-}
-.card {
-    height: 550px;
+    height: 500px;
 }
 .card-img-top {
     height: 300px;
