@@ -5,8 +5,6 @@ import "../../styles/navbar.css";
 
 export const Navbar = () => {
   const [value, setValue] = useState(""); // creating state; user text inputs in real time
-  // const [result, setResult] = useState([]); // stores what we get back in the array to render to the site
-
   const { store, actions } = useContext(Context);
 
   useEffect(() => {
@@ -36,12 +34,7 @@ export const Navbar = () => {
           </button>
         </form>
         <div>
-          <Link to="/aboutUs">
-            <button className="btn btn-primary">
-              <h5>About Us</h5>
-            </button>
-          </Link>
-
+         
           {/* login */}
 
           <Link to="/login">

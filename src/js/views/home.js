@@ -31,7 +31,7 @@ export const Home = (props) => {
 						// <a href="#" key={index}>
 							<div className="searchEntry col-3 gameCard">
 								<div className="card">
-									<Link to ={`/single/${result.slug}`}>
+									<Link to ={`/single/${result.slug}`} class="text-decoration-none">
 										<img src={result.background_image} className="img-thumbnail rounded card-img-top" alt="..." />
 									<div className=" card-body">
 									<h5 className="card-title">{result.name}</h5>

@@ -1,11 +1,9 @@
 form {
     width: 30%;
 }
-h2 {
-    font-family: "Audiowide";
-}
 /* Grow */
 h2 {
+    font-family: "Audiowide";
     display: inline-block;
     vertical-align: middle;
     transform: translateZ(0);
