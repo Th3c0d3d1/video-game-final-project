@@ -25,7 +25,7 @@ export const Home = (props) => {
 			(result, index) => ( // index will include key value
 				<div className="searchEntry col-3 gameCard">
 				<div className="card">
-					<Link to={`/single/${result.slug}`} className="text-decoration-none">
+					<Link to={`/single/${result.slug},`} className="text-decoration-none">
 					{/* ^^^  sets link destination*/}
 					<img src={result.background_image} className="img-thumbnail rounded card-img-top" alt="..."/>
 					{/* ^^^ displays imgs; defines img props */}

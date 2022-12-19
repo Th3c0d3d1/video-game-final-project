@@ -29,7 +29,9 @@ export const Single = props => {
 	console.log('example', game.name);
 
 	return (
-		<p>{game.name}</p>
+		<div>
+			<p>{game.name}</p>
+		</div>
 		// <div className="searchEntry">
 		// 	<div className="">
 		// 		<img src={result.background_image} className="img-thumbnail rounded" />
